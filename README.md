@@ -21,7 +21,6 @@ Make sure your server has the following installed:
 ```bash
 git clone https://github.com/dotnet-architecture/eShopOnWeb.git
 cd eShopOnWeb
-
 🐋 2. Start the App with Docker Compose
 
 The project already includes Dockerfile and docker-compose.yml.
@@ -31,8 +30,7 @@ sudo docker compose up -d
 Check containers:
 
 docker ps
-
-🔥 3. Open Firewall Ports
+3. Open Firewall Ports
 
 Allow HTTP traffic:
 
@@ -46,7 +44,7 @@ sudo ufw status
 sudo apt update
 sudo apt install nginx -y
 
-⚙️ Create NGINX Config
+Create NGINX Config
 
 sudo nano /etc/nginx/sites-available/eshop
 
@@ -93,25 +91,3 @@ docker logs eshoponweb-eshopwebmvc-1
     Stop the stack:
 
 docker compose down
-
-📊 Summary
-Component	Description	Port
-MVC Frontend	eShopWebMvc	localhost:5106
-API Backend	eShopPublicApi	localhost:5200
-SQL Server	Azure SQL Edge	localhost:1433
-NGINX	Reverse Proxy	Public IP:80
-📎 Resources
-
-    Official Repo
-
-    Docker Documentation
-
-    NGINX Documentation
-
-
----
-
-### ✅ To Use It:
-
-1. Save it as `README.md` inside your project root.
-2. Commit and push to GitHub.
